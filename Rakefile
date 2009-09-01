@@ -14,7 +14,7 @@ begin
   Jeweler::Tasks.new do |gemspec|
     gemspec.name = "bcms_feeds"
     gemspec.summary = "Feeds in BrowserCMS"
-    gemspec.description = "A BrowserCMS module which fetches, caches and displays RSS/Atom feeds"
+    gemspec.description = "A BrowserCMS module which fetches, caches and displays RSS/Atom feeds -- now with iCalendar support!"
     gemspec.email = "j@jonathanleighton.com"
     gemspec.homepage = "http://github.com/jonleighton/bcms_feeds"
     gemspec.authors = ["Jon Leighton"]
@@ -25,6 +25,7 @@ begin
     gemspec.files += Dir["lib/bcms_feeds.rb"]
     gemspec.files += Dir["rails/init.rb"]
     gemspec.add_dependency('simple-rss')
+    gemspec.add_dependency('ri_cal')
   end
 rescue LoadError
   puts "Jeweler not available. Install it with: sudo gem install technicalpickles-jeweler -s http://gems.github.com"

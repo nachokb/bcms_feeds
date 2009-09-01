@@ -1,4 +1,5 @@
 <%= f.cms_text_field :name %>
+<%= f.cms_drop_down :content_type, Feed.supported_content_types, :default => Feed.default_content_type %>
 <%= f.cms_text_field :url %>
 <%= f.cms_text_area :code %>
 <%= f.cms_drop_down :handler, ActionView::Template.template_handler_extensions, :default => "erb" %>

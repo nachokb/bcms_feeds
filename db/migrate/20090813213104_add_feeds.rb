@@ -2,6 +2,7 @@ class AddFeeds < ActiveRecord::Migration
   def self.up
     create_table :feeds do |f|
       f.string :url
+      f.string :content_type
       f.text :contents
       f.datetime :expires_at
     end

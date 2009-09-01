@@ -138,6 +138,7 @@ ActiveRecord::Schema.define(:version => 20090813213104) do
 
   create_table "feeds", :force => true do |t|
     t.string   "url"
+    t.string   "content_type"
     t.text     "contents"
     t.datetime "expires_at"
   end
